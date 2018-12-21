@@ -1,5 +1,9 @@
-# OpenHumans Frontend experiments
+# OpenHumans projects
 
-A collection of experimental frontend UIs for the different OpenHumans projects. There are UI for both individual users viewing their data as well as researchers viewing all the users data for the project
+A collection of projects related to the open humans project. They include experimental frontend UIs for the different OpenHumans projects and sample data analysis jupyter notebooks. 
 
 ## Project descriptions
+
+### public-data-explorer
+
+Public data explorer is a front-end project for the public data api provided by the open humans project
