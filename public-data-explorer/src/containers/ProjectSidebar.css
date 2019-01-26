@@ -1,0 +1,23 @@
+#project-card {
+    border-color: #4ac1c8;
+}
+#project-header {
+    background-color: #e6f9fa; 
+    border-color: #4ac1c8;
+    font-weight: bold;
+}
+
+#project-list {
+    max-height: 100vh;
+    overflow: auto;
+}
+
+#project {
+    background-color: #e6f9fa;
+}
+
+#project.active {
+    border-color: #e6f9fa;
+    background-color: #e6f9fa;
+    color: #3c9da3;
+}
