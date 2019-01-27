@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardBody, CardText, CardLink } from 'reactstrap';
+import { Card, CardHeader, CardBody, CardText, CardLink } from 'reactstrap';
 import { connect } from 'react-redux';
 import isEmpty from 'lodash/isEmpty';
 
@@ -15,7 +15,7 @@ class UserData extends Component {
       <div key={index}>
         <CardText>Name: {dataEntry.basename}</CardText>
         <CardText>Created: {dataEntry.created}</CardText>
-        <CardLink>Dwnlaod: {dataEntry.download_url}</CardLink>
+        <CardLink href={dataEntry.download_url}>Download Data</CardLink>
         <hr></hr>
       </div>
     );  
@@ -24,6 +24,7 @@ class UserData extends Component {
   render() {
     return (
       <Card id="content-card">
+        <CardHeader id="content-header">User Data Entries</CardHeader>
         <CardBody id="content-body">
         { isEmpty(this.props.userData)
           ? <CardText>No user data to display for this project</CardText>

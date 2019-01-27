@@ -15,7 +15,7 @@ class App extends Component {
       <Container fluid={true} className="app-container">
           <Row>
             <Col md={12} className="navbar-column">
-              <Navbar className="navbar">
+              <Navbar className="navbar h-100" sticky="top">
                 <NavbarBrand>
                   OpenHumans Public Data Explorer
                 </NavbarBrand>
@@ -24,10 +24,10 @@ class App extends Component {
           </Row>
           <Row>
             <Col md={3} className="sidebar-column">
-              <ProjectSidebar className="sidebar"/>
+              <ProjectSidebar className="sidebar h-100"/>
             </Col>
             <Col md={3} className="items-column">
-              <UserList className="item-list"/>
+              <UserList className="item-list h-100"/>
             </Col>
             <Col md={6} className="content-column">
               <UserData className="item-content"/>

@@ -1,6 +1,6 @@
 {
-  "short_name": "Reader",
-  "name": "Reader app built with React and Redux",
+  "short_name": "Opeh Humans",
+  "name": "Open Humans public data explorer",
   "icons": [
     {
       "src": "favicon.ico",

@@ -51,7 +51,7 @@ class ProjectSidebar extends Component {
         <ListGroup flush id="project-list">
           {isEmpty(this.props.projectList)
             ? <ListGroup id="item-list">
-            <ListGroupItem id="project-item">Loading Projects</ListGroupItem>
+              <ListGroupItem id="project-item">Loading Projects</ListGroupItem>
             </ListGroup>
             : <ListGroup id="item-list">
             {this.renderProjectList(this.props.projectList)}

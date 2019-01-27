@@ -1,22 +1,14 @@
-#item-header {
+#user-header {
     font-weight: bold;
 }
 
-#item-list {
+#user-list {
     max-height: 100vh;
     overflow: auto;
 }
 
-#project-item.active {
+#user.active {
     border-color: #e6f9fa;
     background-color: #e6f9fa;
     color: #3c9da3;
-}
-
-#project-item-heading {
-    font-weight: bold;
-}
-
-#project-item-id {
-    font-style: italic;
 }

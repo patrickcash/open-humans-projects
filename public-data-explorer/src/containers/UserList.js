@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, ListGroup, ListGroupItem, ListGroupItemHeading } from 'reactstrap';
+import { Card, CardHeader, ListGroup, ListGroupItem } from 'reactstrap';
 import { connect } from 'react-redux';
 import { getUserData } from '../actions/OHActions';
 import isEmpty from 'lodash/isEmpty';
@@ -16,8 +16,12 @@ class UserList extends Component {
   }
 
   componentDidUpdate(prevProps){
-    if(isEmpty(prevProps.projectUsers)){
+    console.log("userlist update");
+    if(prevProps.projectUsers !== this.props.projectUsers){
       this.props.getUserData("https://www.openhumans.org/api/public-data/?format=json&source="+this.props.source+"&username="+this.props.projectUsers[0]);
+      if(this.state.activeUser !== 0){
+        this.setState({activeUser: 0});
+      }
     }
   }
 
@@ -28,25 +32,24 @@ class UserList extends Component {
 
   renderUsers = users => {
     return users.map((user,index) =>
-      <ListGroupItem id="user-item" key={"item"+index} active={index === this.state.activeUser} onClick={() => this.handleUserClick(index)}>
-        <ListGroupItemHeading id="user-item-heading">User: {user}</ListGroupItemHeading>
-      </ListGroupItem>
+      <ListGroupItem id="user" key={"item"+index} active={index === this.state.activeUser} onClick={() => this.handleUserClick(index)}>{user}</ListGroupItem>
     );  
   }  
 
   render() {
     return (
       <Card id="item-card">
-          <ListGroup id="item-list">
-          { isEmpty(this.props.projectUsers)
-            ? <ListGroup id="item-list">
-            <ListGroupItem id="project-item">Select a Project</ListGroupItem>
-            </ListGroup>
-            : <ListGroup id="item-list">
-            {this.renderUsers(this.props.projectUsers)}
-            </ListGroup>
-          }
+        <CardHeader id="user-header">Project Users</CardHeader>
+        <ListGroup id="user-list">
+        { isEmpty(this.props.projectUsers)
+          ? <ListGroup id="user-list">
+            <ListGroupItem id="user">Select a Project</ListGroupItem>
           </ListGroup>
+          : <ListGroup id="item-list">
+          {this.renderUsers(this.props.projectUsers)}
+          </ListGroup>
+        }
+        </ListGroup>
       </Card>
     );
   }
