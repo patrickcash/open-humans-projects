@@ -16,7 +16,6 @@ class UserList extends Component {
   }
 
   componentDidUpdate(prevProps){
-    console.log("userlist update");
     if(prevProps.projectUsers !== this.props.projectUsers){
       this.props.getUserData("https://www.openhumans.org/api/public-data/?format=json&source="+this.props.source+"&username="+this.props.projectUsers[0]);
       if(this.state.activeUser !== 0){

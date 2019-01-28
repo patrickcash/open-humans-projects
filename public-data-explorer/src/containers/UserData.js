@@ -15,8 +15,13 @@ class UserData extends Component {
       <div key={index}>
         <CardText>Name: {dataEntry.basename}</CardText>
         <CardText>Created: {dataEntry.created}</CardText>
+        <CardText>Description: {dataEntry.metadata.description}</CardText>
+        <CardText>Tags: {dataEntry.metadata.tags.map((tag, tagindex) => 
+          "\"" + tag + "\" " 
+        )}
+        </CardText>
         <CardLink href={dataEntry.download_url}>Download Data</CardLink>
-        <hr></hr>
+        <hr/>
       </div>
     );  
   }  

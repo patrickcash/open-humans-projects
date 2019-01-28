@@ -169,7 +169,6 @@ export function getProjectList()  {
  */
 export function getUsers(url)  {
   return dispatch => {
-    console.log(url);
     if (url) {
       fetch(url)
       .then(response => response.json())
