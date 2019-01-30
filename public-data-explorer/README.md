@@ -1,11 +1,14 @@
-# public-data-explorer
+# Open Humans Public Data Explorer
 
-Interface to explore the open humans public data explorer
-
-## Basic Architecture
-
-The base reader interface is built using React and Redux along with the Reactstrap UI component library
+Simple interface to explore the open humans publicly available data  data 
 
 ## Usage
 
-The data explorere allows the user to look through the projects available and look at the user data
+The public data explorer is focused on the projects availble on Open Humans. The explorer allows you to select the project(s) you are interested in and view all the users participating in the project along with all of the public data entries that user has for that project
+
+## Basic Architecture
+
+React app with Redux state management
+Reactstrap UI component library
+Bootstrap styling
+

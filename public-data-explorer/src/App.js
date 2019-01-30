@@ -23,13 +23,13 @@ class App extends Component {
             </Col>
           </Row>
           <Row>
-            <Col md={3} className="sidebar-column">
+            <Col md={2} className="sidebar-column">
               <ProjectSidebar className="sidebar h-100"/>
             </Col>
-            <Col md={3} className="items-column">
+            <Col md={2} className="items-column">
               <UserList className="item-list h-100"/>
             </Col>
-            <Col md={6} className="content-column">
+            <Col md={8} className="content-column">
               <UserData className="item-content"/>
             </Col>
           </Row>
