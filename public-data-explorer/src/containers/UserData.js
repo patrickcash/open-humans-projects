@@ -5,8 +5,16 @@ import isEmpty from 'lodash/isEmpty';
 
 import './UserData.css';
 
+/*
+ * Displays all of the selected users data entries for the selected project
+ */
 class UserData extends Component {
   
+  /*
+   * Renders each data entry:
+   *    
+   * Name, data created, description, tags and a summary (visualization) of the data 
+   */
   renderUserData = userData => {
     if(!userData){
       return null;

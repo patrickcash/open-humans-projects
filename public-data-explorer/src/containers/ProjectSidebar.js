@@ -6,6 +6,9 @@ import isEmpty from 'lodash/isEmpty';
 
 import './ProjectSidebar.css';
 
+/*
+ * Displays all of the projects available in the Open Humans public data api as a list
+ */
 class ProjectSidebar extends Component {
 
   constructor(){
@@ -22,6 +25,9 @@ class ProjectSidebar extends Component {
     this.props.getProjectList();
   }
 
+  /*
+  * Select the initial project and load the users
+  */
   componentDidUpdate(prevProps){
     if(isEmpty(prevProps.projectList)){
       this.props.getUsers("https://www.openhumans.org/api/public-data/members-by-source/?format=json&source="+this.props.projectList[0].source);

@@ -12,3 +12,6 @@ React app with Redux state management
 Reactstrap UI component library
 Bootstrap styling
 
+## Screenshot
+
+![ScreenShot](screenshot.png)

@@ -6,6 +6,9 @@ import isEmpty from 'lodash/isEmpty';
 
 import './UserList.css';
 
+/*
+ * Displays all of the users registered for a project
+ */
 class UserList extends Component {
 
   constructor(){
@@ -15,6 +18,9 @@ class UserList extends Component {
     };
   }
 
+  /*
+  * Select the first user and load the user's data entries
+  */
   componentDidUpdate(prevProps){
     if(prevProps.projectUsers !== this.props.projectUsers){
       this.props.getUserData("https://www.openhumans.org/api/public-data/?format=json&source="+this.props.source+"&username="+this.props.projectUsers[0]);
@@ -24,6 +30,9 @@ class UserList extends Component {
     }
   }
 
+  /*
+  * Load the user's data entries for the project
+  */
   handleUserClick = index => {
     this.props.getUserData("https://www.openhumans.org/api/public-data/?format=json&source="+this.props.source+"&username="+this.props.projectUsers[index]);
     this.setState({activeUser: index});
