@@ -1,6 +1,6 @@
 # Open Humans Public Data Explorer
 
-Simple interface to explore the open humans publicly available data  data 
+Simple interface to explore the open humans publicly available data
 
 ## Usage
 
